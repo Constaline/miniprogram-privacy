@@ -14,6 +14,7 @@
 
 1. 2023 年 9 月 15 号之前，默认不会启用隐私相关功能，所以检测不到需要弹窗的情况，可以在 app.json 中配置 `"__usePrivacyCheck__": true` 之后，接口才可以检测到是否需要弹窗。个人实际情况：我在开发者工具中配置了 `"__usePrivacyCheck__": true` ，`needAuthorization` 无论如何返回的都是 `false`，但在真机模拟的情况下可以返回 `true`
 2. 自动打开隐私保护指引界面需在「小程序管理后台」配置《小程序用户隐私保护指引》，官方[用户隐私保护指引填写说明](https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/)。
+3. `less`文件编译成`wxss`文件，需要在微信开发者工具安装VSCode[mrcrowl.easy-less](https://marketplace.visualstudio.com/items?itemName=mrcrowl.easy-less)插件，下载vsix格式文件进行安装。[配置参考链接](https://developers.weixin.qq.com/community/develop/article/doc/000e80262301c016e10e2146056813)
 
 # 效果
 
