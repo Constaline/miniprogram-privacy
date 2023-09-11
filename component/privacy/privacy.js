@@ -46,8 +46,10 @@ Component({
         },
         // 拒绝隐私协议
         exitMiniProgram() {
-            // 直接退出小程序
-            wx.exitMiniProgram()
+            wx.showToast({
+                title: '必须同意后才可以继续使用当前小程序',
+                icon: 'none'
+            })
         },
         // 同意隐私协议
         handleAgreePrivacyAuthorization() {
@@ -81,6 +83,10 @@ Component({
             }
 
             return 0
+        },
+        // 通过绑定空事件禁止滑动事件的穿透
+        handleCatchtouchMove() {
+            return
         }
     },
 })
